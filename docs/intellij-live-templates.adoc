@@ -32,6 +32,13 @@ public void $NAME$($CHAR$, $KEY$) {
 @InRange(minInt = 0)
 ----
 
+`rangeNeg`
+
+[source,java]
+----
+@InRange(maxInt = 0)
+----
+
 `rwjq`
 
 [source,java]
