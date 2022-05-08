@@ -1,0 +1,61 @@
+
+# Live Templates IntelliJ
+
+`ass`
+
+[source,java]
+----
+assertThat($RESULT$).isEqualTo($EXPECTED$);
+----
+
+`prop`
+
+[source,java]
+----
+@Property
+public void $NAME$($CHAR$, $KEY$) {
+
+}
+----
+
+`rangeAZ`
+
+[source,java]
+----
+@InRange(minChar = 'A', maxChar = 'Z')
+----
+
+`rangePos`
+
+[source,java]
+----
+@InRange(minInt = 0)
+----
+
+`rwjq`
+
+[source,java]
+----
+@RunWith(JUnitQuickcheck.class)
+----
+
+`seed`
+
+[source,java]
+----
+@When(seed = )
+----
+
+`symDec`
+
+[source,java]
+----
+var decodedChar = CesarEncryptor.decode(encodedChar, anyKey);
+----
+
+`symEnc`
+
+[source,java]
+----
+var encodedChar = CesarEncryptor.encode(anyChar, anyKey);
+----
