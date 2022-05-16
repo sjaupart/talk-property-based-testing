@@ -5,25 +5,24 @@
 
 === Premier test : Symétrie
 
-* Ajouter le runner JUnit Quickcheck
-* Créer le test vide avec la bonne annotation `@Property`.
+* `addrunner` - Ajouter le runner JUnit Quickcheck
+* `addproperty` - Créer le test vide avec la bonne annotation `@Property`.
 * Ajouter les paramètres `char anyChar` et `int anyKey`.
-* Rédiger le test, et lancer (résultat attendu -> échec).
-* Ajouter les annotations respectant `A < anyChar < Z` et `0 < anyKey < 26`.
+* `symEnc` + `symDec` + `ass` - Rédiger le test, et lancer (résultat attendu -> échec).
+* `rangeAZ` + `range26` - Ajouter les annotations respectant `A < anyChar < Z` et `0 < anyKey < 26`.
 * Relancer (résultat attendu -> OK).
 
 === Second test : Circularité
 
-* Créer le test vide avec la bonne annotation `@Property`.
-* Ajouter les paramètres `char anyChar` et `int anyKey`.
-* Ajouter les annotations respectant `A < anyChar < Z` et `anyKey > 26`.
+* `addproperty` - Créer le test vide avec la bonne annotation `@Property`.
+* `addcircparams` - Ajouter les paramètres `char anyChar` et `int anyKey` + annotations respectant `A < anyChar < Z` et `anyKey > 26`.
 * Rédiger le test, et lancer.
 
 == Seed & Shrinking - Prime Numbers
 
 Lancer le test plusieurs fois pour montrer la génération aléatoire de la seed dans les logs.
 
-Rajouter l'annotation `@When(seed = )` avec la dernière seed générée.
+Copier la dernière seed et rajouter l'annotation `@When` (`seed`).
 
 Relancer le test pour montrer une valeur d'erreur fixée grace à la seed.
 
@@ -37,5 +36,5 @@ Copier-coller le test `CesarEncryptionTest.encoding_key_must_be_positive()` dans
 * `@Test` -> `@Property`.
 * Ajouter les paramètres `char anyChar` et `int anyNegativeKey`.
 * Utiliser ces paramètres dans le test.
-* Limiter la génération de la clé aux valeurs négatives : `@InRange(maxInt = 0)`.
+* `rangeNeg` - Limiter la génération de la clé aux valeurs négatives : `@InRange(maxInt = 0)`.
 * Lancer le test.
