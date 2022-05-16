@@ -28,6 +28,7 @@ Relancer le test pour montrer une valeur d'erreur fixée grace à la seed.
 
 [NOTE]
 Pas de démo sur le `shrinking`.
+Ouvrir l'image `images/shrinking.png`
 
 == Property test = Unit test ?
 
@@ -38,3 +39,7 @@ Copier-coller le test `CesarEncryptionTest.encoding_key_must_be_positive()` dans
 * Utiliser ces paramètres dans le test.
 * `rangeNeg` - Limiter la génération de la clé aux valeurs négatives : `@InRange(maxInt = 0)`.
 * Lancer le test.
+
+== Générateurs
+
+Exploration simple de quelques classes et de leurs générateurs.
