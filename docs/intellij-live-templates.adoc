@@ -8,12 +8,29 @@
 assertThat($RESULT$).isEqualTo($EXPECTED$);
 ----
 
-`addproperty`
+`cesar_print`
+
+[source,java]
+----
+System.out.println(anyChar + " " + anyKey);
+----
+
+`property_test`
 
 [source,java]
 ----
 @Property
-public void $NAME$($CHAR$, $KEY$) {
+public void cesar_should_be_symmetric(char anyChar, int anyKey) {
+
+}
+----
+
+`property_circ`
+
+[source,java]
+----
+@Property
+public void cesar_should_be_circular(char anyChar, int anyKey) {
 
 }
 ----
@@ -23,20 +40,6 @@ public void $NAME$($CHAR$, $KEY$) {
 [source,java]
 ----
 @InRange(minChar = 'A', maxChar = 'Z')
-----
-
-`addcircparams`
-
-[source,java]
-----
-@InRange(minChar = 'A', maxChar = 'Z') char anyChar, @InRange(minInt = 26) int anyKey
-----
-
-`range26`
-
-[source,java]
-----
-@InRange(minInt = 0, maxInt = 26)
 ----
 
 `rangePos`
@@ -53,7 +56,7 @@ public void $NAME$($CHAR$, $KEY$) {
 @InRange(maxInt = 0)
 ----
 
-`addrunner`
+`runner`
 
 [source,java]
 ----

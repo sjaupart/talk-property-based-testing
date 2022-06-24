@@ -5,17 +5,15 @@
 
 === Premier test : Symétrie
 
-* `addrunner` - Ajouter le runner JUnit Quickcheck
-* `addproperty` - Créer le test vide avec la bonne annotation `@Property`.
-* Ajouter les paramètres `char anyChar` et `int anyKey`.
+* `property_test` - Créer le test vide avec la bonne annotation `@Property`. Les paramètres `char anyChar` et `int anyKey` sont inclus dans la création du test.
 * `symEnc` + `symDec` + `ass` - Rédiger le test, et lancer (résultat attendu -> échec).
-* `rangeAZ` + `range26` - Ajouter les annotations respectant `A < anyChar < Z` et `0 < anyKey < 26`.
+* `rangeAZ` + `rangePos` avec une valeur de 26 - Ajouter les annotations respectant `A < anyChar < Z` et `0 < anyKey < 26`.
 * Relancer (résultat attendu -> OK).
 
 === Second test : Circularité
 
-* `addproperty` - Créer le test vide avec la bonne annotation `@Property`.
-* `addcircparams` - Ajouter les paramètres `char anyChar` et `int anyKey` + annotations respectant `A < anyChar < Z` et `anyKey > 26`.
+* `property_circ` - Créer le test vide avec la bonne annotation `@Property`.
+* Ajouter les annotations respectant `A < anyChar < Z` et `anyKey > 26`.
 * Rédiger le test, et lancer.
 
 == Seed & Shrinking - Prime Numbers
