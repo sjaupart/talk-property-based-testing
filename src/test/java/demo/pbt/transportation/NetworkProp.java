@@ -1,4 +1,4 @@
-package demo.tourainetech.transportation;
+package demo.pbt.transportation;
 
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;

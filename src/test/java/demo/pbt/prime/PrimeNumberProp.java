@@ -1,4 +1,4 @@
-package demo.tourainetech.prime;
+package demo.pbt.prime;
 
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.When;

@@ -1,4 +1,4 @@
-package demo.tourainetech.transportation;
+package demo.pbt.transportation;
 
 import lombok.AllArgsConstructor;
 import lombok.ToString;

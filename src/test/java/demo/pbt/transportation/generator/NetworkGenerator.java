@@ -1,13 +1,13 @@
-package demo.tourainetech.transportation.generator;
+package demo.pbt.transportation.generator;
 
 import com.google.auto.service.AutoService;
 import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
 import com.pholser.junit.quickcheck.random.SourceOfRandomness;
-import demo.tourainetech.transportation.Bus;
-import demo.tourainetech.transportation.Network;
-import demo.tourainetech.transportation.Station;
-import demo.tourainetech.transportation.Weather;
+import demo.pbt.transportation.Bus;
+import demo.pbt.transportation.Network;
+import demo.pbt.transportation.Station;
+import demo.pbt.transportation.Weather;
 
 import java.util.Set;
 import java.util.stream.Stream;
