@@ -2,7 +2,7 @@ package demo.pbt.cesar;
 
 public class CesarEncryptor {
 
-    public static char encode(char character, int key) {
+    public static char cipher(char character, int key) {
         if (key < 0) {
             throw new IllegalArgumentException("Cipher key must be positive.");
         }
@@ -16,7 +16,7 @@ public class CesarEncryptor {
         return (char) (character + mod_key);
     }
 
-    public static char decode(char character, int key) {
+    public static char decipher(char character, int key) {
         if (key < 0) {
             throw new IllegalArgumentException("Cipher key must be positive.");
         }

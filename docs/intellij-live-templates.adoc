@@ -70,16 +70,23 @@ public void cesar_should_be_circular(char anyChar, int anyKey) {
 @When(seed = $SEED$)
 ----
 
-`symEnc`
+`symCipher`
 
 [source,java]
 ----
-var encodedChar = CesarEncryptor.encode(anyChar, anyKey);
+var cipheredChar = CesarEncryptor.cipher(anyChar, anyKey);
 ----
 
-`symDec`
+`symDecipher`
 
 [source,java]
 ----
-var decodedChar = CesarEncryptor.decode(encodedChar, anyKey);
+var decipheredChar = CesarEncryptor.decipher(cipheredChar, anyKey);
+----
+
+`symMod`
+
+[source,java]
+----
+var cipheredCharModulo = CesarEncryptor.cipher(anyChar, anyKey);
 ----
