@@ -11,13 +11,13 @@ public class CesarEncryptor {
             throw new IllegalArgumentException("Cipher key must be positive.");
         }
 
-        int moduloKey = moduloKey(key);
+        int cipheredCharacter = character + moduloKey(key);
 
-        if (character + moduloKey > LAST_CESAR_CHARACTER) {
-            return (char) (character + moduloKey - NUMBER_OF_CESAR_CHARACTERS);
+        if (cipheredCharacter > LAST_CESAR_CHARACTER) {
+            cipheredCharacter -= NUMBER_OF_CESAR_CHARACTERS;
         }
 
-        return (char) (character + moduloKey);
+        return (char) cipheredCharacter;
     }
 
     public static char decipher(char character, int key) {
@@ -25,13 +25,13 @@ public class CesarEncryptor {
             throw new IllegalArgumentException("Cipher key must be positive.");
         }
 
-        int moduloKey = moduloKey(key);
+        int decipheredCharacter = character - moduloKey(key);
 
-        if (character - moduloKey < FIRST_CESAR_CHARACTER) {
-            return (char) (character - moduloKey + NUMBER_OF_CESAR_CHARACTERS);
+        if (decipheredCharacter < FIRST_CESAR_CHARACTER) {
+            decipheredCharacter += NUMBER_OF_CESAR_CHARACTERS;
         }
 
-        return (char) (character - moduloKey);
+        return (char) decipheredCharacter;
     }
 
     private static int moduloKey(int key) {
