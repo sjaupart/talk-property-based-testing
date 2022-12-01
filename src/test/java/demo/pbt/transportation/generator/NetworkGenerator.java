@@ -23,17 +23,17 @@ public class NetworkGenerator extends Generator<Network> {
 
     @Override
     public Network generate(SourceOfRandomness random, GenerationStatus status) {
-        var stations = randomList(Station.class, random, status);
-        var buses = randomList(Bus.class, random, status);
+        var stations = randomCollection(Station.class, random, status);
+        var buses = randomCollection(Bus.class, random, status);
         var weather = gen().type(Weather.class).generate(random, status);
 
         return new Network(stations, buses, weather);
     }
 
-    private <T> Set<T> randomList(Class<T> clazz, SourceOfRandomness random, GenerationStatus status) {
+    private <T> Set<T> randomCollection(Class<T> clazz, SourceOfRandomness random, GenerationStatus status) {
         return Stream
                 .generate(() -> gen().type(clazz).generate(random, status))
-                .limit(10)
+                .limit(5)
                 .collect(toSet());
     }
 }

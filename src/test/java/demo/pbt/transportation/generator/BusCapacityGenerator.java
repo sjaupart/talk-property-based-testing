@@ -4,18 +4,18 @@ import com.google.auto.service.AutoService;
 import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
 import com.pholser.junit.quickcheck.random.SourceOfRandomness;
-import demo.pbt.transportation.Bus;
 import demo.pbt.transportation.BusCapacity;
 
 @AutoService(Generator.class)
-public class BusGenerator extends Generator<Bus> {
+public class BusCapacityGenerator extends Generator<BusCapacity> {
 
-    public BusGenerator() {
-        super(Bus.class);
+    public BusCapacityGenerator() {
+        super(BusCapacity.class);
     }
 
     @Override
-    public Bus generate(SourceOfRandomness random, GenerationStatus status) {
-        return gen().constructor(Bus.class, BusCapacity.class).generate(random, status);
+    public BusCapacity generate(SourceOfRandomness random, GenerationStatus status) {
+        var validCapacity = random.nextInt(10, 50);
+        return new BusCapacity(validCapacity);
     }
 }

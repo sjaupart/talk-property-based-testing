@@ -7,6 +7,6 @@ import lombok.ToString;
 @ToString
 public class Bus {
 
-    private Integer capacity;
+    private BusCapacity capacity;
 
 }
